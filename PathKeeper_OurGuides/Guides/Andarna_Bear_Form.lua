@@ -17,14 +17,20 @@ PK:RegisterGuide({
     minLevel = 10,
     maxLevel = 20,
     map = DARNASSUS,
-    rev = "4",
+    rev = "5",
     quests = {
         [5921] = "Heeding the Call",
+        [5923] = "Heeding the Call",
+        [5924] = "Heeding the Call",
+        [5925] = "Heeding the Call",
         [5929] = "Great Bear Spirit",
         [5931] = "Back to Darnassus",
         [6001] = "Body and Heart",
     },
     steps = {
+        -- If the chain was started at another trainer (Stormwind, Dolanaar), you hold a "Heeding the Call"
+        -- that only sends you to Mathrengyl. Optional: a quest you never took does not block the step.
+        { turnin = { 5923, 5924, 5925 }, npc = "Mathrengyl Bearwalker", at = { 35.4, 8.4 }, class = "DRUID", optional = true, text = "If another druid trainer gave you Heeding the Call, hand it in to Mathrengyl Bearwalker in the Cenarion Enclave, north-west Darnassus." },
         { accept = { 5921 }, npc = "Mathrengyl Bearwalker", at = { 35.4, 8.4 }, class = "DRUID", text = "Mathrengyl Bearwalker, the druid trainer in the Cenarion Enclave, north-west Darnassus. He gives the Moonglade quest and teaches Teleport: Moonglade." },
 
         -- Moonglade
