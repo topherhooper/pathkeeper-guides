@@ -20,7 +20,7 @@ to play; the rest is for editing and checking guides.
 ## Use it in game
 
 - `/pk guides` lists every guide; ours have ids that start with `ours-`.
-- `/pk load ours-skyborne-druid-zephras` loads one. `/pk detect` goes back to PathKeeper's own route.
+- `/pk load ours-andarna-bear-form` loads one (Bear Form through Darnassus and Moonglade, for a Skyborne druid who has left Zephras Isle). `/pk detect` goes back to PathKeeper's own route.
 - Our guides set `kind = "custom"`, so PathKeeper's auto-detect never switches to them by itself.
 
 ## The druid overlay (dwarf and human route)

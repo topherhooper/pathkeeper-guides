@@ -4,6 +4,5 @@
 ## Version: 0.3.0
 ## Dependencies: PathKeeper
 
-Guides\Skyborne_Druid_Zephras.lua
 Guides\Andarna_Bear_Form.lua
 Overlays\Druid_DwarfHuman.lua
