@@ -14,7 +14,7 @@
 local PK = PathKeeper
 if not (PK and PK.RegisterGuide) then return end
 
-local LOCH, WETLANDS, ARATHI, HILLSBRAD, ALTERAC, ISLE = 1432, 1437, 1417, 1424, 1416, 2521
+local HILLSBRAD, ALTERAC, ISLE = 1424, 1416, 2521
 local function note(text) return { class = "DRUID", manual = true, text = "Andarna's guide. " .. text } end
 local function go(map, x, y, text, danger)
     return { at = { x, y }, map = map, class = "DRUID", text = "Andarna's guide. " .. text, danger = danger }
@@ -22,37 +22,28 @@ end
 
 PK:RegisterGuide({
     id = "ours-andarna-bear-form",
-    name = "Andarna's guide: overland to Zephras Isle for Bear Form",
+    name = "Andarna's guide: back to Zephras Isle for Bear Form (by boat)",
     kind = "custom", -- load with /pk load ours-andarna-bear-form ; /pk detect returns to your route
     faction = "Alliance",
     minLevel = 10,
     maxLevel = 25,
     map = ISLE,
-    rev = "6",
+    rev = "7",
     quests = {
         [94006] = "The Great Ursera Spirit",
         [94638] = "Strength and Mercy",
     },
     steps = {
-        note("This is a long run through zones 10 to 25 levels above you. Go with your warrior, stay on the road, do not fight: if something chases you, keep running. Dying is fine; you come back at the nearest graveyard, usually further along. Take every flight point on the way so you never have to walk this again."),
-
-        -- Loch Modan
-        go(LOCH, 33.9, 50.9, "Thelsamar in Loch Modan (tram or road from Ironforge, then east through the tunnels). Take the flight point here if you do not have it."),
-        go(LOCH, 20.0, 17.0, "North out of Loch Modan: Algaz Station, then the Dun Algaz tunnels into the Wetlands.", "Dragonmaw orcs around level 22 stand near the Dun Algaz road. Run straight through the tunnels and do not stop."),
-
-        -- Wetlands
-        go(ARATHI, 48.8, 88.0, "Wetlands: follow the road north, then north-east, to the Thandol Span, the great bridge into the Arathi Highlands. The arrow points at the far (Arathi) end.", "Crocolisks and raptors level 25 to 30 sit right beside the Wetlands road. On the bridge itself, Dark Iron dwarves are elite: cross when their backs are turned."),
-
-        -- Arathi Highlands
-        go(ARATHI, 45.7, 46.1, "Arathi Highlands: follow the road north to Refuge Pointe in the middle of the zone and take the flight point (Cedrik Prose).", "Everything here is level 30 or more. Stay in the middle of the road."),
-        go(ARATHI, 20.0, 30.0, "West along the road through Thoradin's Wall into the Hillsbrad Foothills."),
-
-        -- Hillsbrad Foothills
-        go(HILLSBRAD, 49.3, 52.3, "Hillsbrad: keep to the southern road, south-west to Southshore, and take the flight point (Darla Harris). From now on you can fly here from Ironforge.", "Tarren Mill to the north is a Horde town: stay on the southern road."),
+        -- By boat to Southshore (Topher's route, 2026-11-24). If there is no Southshore boat, the walk is:
+        -- Menethil, east then north-east across the Wetlands to the Thandol Span, north to Refuge Pointe
+        -- in Arathi, west through Thoradin's Wall, then the southern Hillsbrad road to Southshore.
+        note("The trip is by boat: get to Auberdine in Darkshore (boat from Stormwind Harbor, or from Rut'theran below Darnassus), then take the boat to Menethil Harbor from the Auberdine dock."),
+        note("At Menethil Harbor, stay aboard: the boat carries on to Southshore in the Hillsbrad Foothills. Press next when you land in Southshore."),
+        go(HILLSBRAD, 49.3, 52.3, "Southshore: take the flight point (Darla Harris). From now on you can fly here from Ironforge."),
         note("Southshore is the last safe town. Repair, buy water and food here. Do not bind your hearthstone yet: you will bind it on the isle."),
 
         -- Dalaran
-        go(ALTERAC, 12.2, 56.6, "From Southshore go west, then north along the shore of Lordamere Lake to Dalaran, in the south-west corner of the Alterac Mountains. The skycutter dock is where you first arrived from the isle, on the north side of the city (fan guides say about 12.5, 51.8).", "Arcane elementals in groups roam the Dalaran ruins, and guides warn of hostile guards nearby. Keep to the edge and do not fight."),
+        go(ALTERAC, 12.2, 56.6, "This is the one stretch on foot. Go with your warrior, do not fight, and keep running if chased; dying only sends you to the nearest graveyard. From Southshore go west, then north along the shore of Lordamere Lake to Dalaran, in the south-west corner of the Alterac Mountains. The skycutter dock is where you first arrived from the isle, on the north side of the city (fan guides say about 12.5, 51.8).", "Arcane elementals in groups roam the Dalaran ruins, and guides warn of hostile guards nearby. Keep to the edge and do not fight."),
         note("Wait for the skycutter to Valanaar (every 5 to 10 minutes) and board it. Press next once you land on Zephras Isle. If it will not take you, tell Claude what you see."),
 
         -- Zephras Isle
