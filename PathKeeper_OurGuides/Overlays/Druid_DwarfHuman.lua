@@ -8,7 +8,7 @@
 local PK = PathKeeper
 if not (PK and PK.guides) then return end
 
-local REV = "ours7" -- change when the steps below change, so PathKeeper re-finds your place
+local REV = "ours8" -- change when the steps below change, so PathKeeper re-finds your place
 PK.oursOverlayReport = {}
 
 -- Trainers whose position comes from PathKeeper's own data.
@@ -65,7 +65,7 @@ overlay("alliance-dunmorogh", "^Maître de classe %(niveau 10%)", {
         "Druid trainer (level 10): Sheldras Moontree in the Stormwind Park. Take the Deeprun Tram from Ironforge. Learn Teleport: Moonglade here; later stops use it."),
     note("Healer setup (level 10): tell PathKeeper your role with /pk role soigneur (healer), add your warrior as tank in the Group tab (/pk groupe), and turn dungeon quests on with /pk donjon on. Keep Healing Touch, Rejuvenation, Mark of the Wild and Thorns on your caster bar; Mark and Thorns go on the warrior before every pull."),
     note("Healer gear (level 10): from now on pick Intellect and Spirit on quest rewards, in cloth or leather. Buy water every time you pass an innkeeper: drinking is what sets your pace with a warrior."),
-    note("Bear Form quest (level 10): you do not need to go back to Zephras Isle. The druid trainer in Darnassus gives the Moonglade chain instead. Type /pk load ours-andarna-bear-form for it, then /pk detect to return here. Bear Form is your backup, not your job: it keeps you alive when something turns on you."),
+    note("Bear Form quest (level 10): a Skyborne only gets it on Zephras Isle (the Moonglade quest from mainland trainers just teaches the teleport). Type /pk load ours-andarna-bear-form for the overland route back, then /pk detect to return here. Bear Form is your backup, not your job: it keeps you alive when something turns on you."),
 })
 
 ---------------------------------------------------------------------------

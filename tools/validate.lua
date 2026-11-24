@@ -5,6 +5,7 @@ local STEP_KEYS = {
     level = "number", at = "coords", map = "number", npc = "string", text = "string",
     class = "class", race = "any", bind = "any",
     manual = "boolean", optional = "boolean", normal = "boolean", dungeon = "any", deathskip = "any", block = "any",
+    danger = "string", -- warning line PathKeeper shows with the step
     ours = "boolean", -- marks a step an overlay added to one of PathKeeper's own guides
 }
 local CLASSES = { WARRIOR = 1, PALADIN = 1, HUNTER = 1, ROGUE = 1, PRIEST = 1, SHAMAN = 1, MAGE = 1, WARLOCK = 1, DRUID = 1 }
