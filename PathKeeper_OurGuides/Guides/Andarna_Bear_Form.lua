@@ -28,7 +28,7 @@ PK:RegisterGuide({
     minLevel = 10,
     maxLevel = 25,
     map = ISLE,
-    rev = "7",
+    rev = "8",
     quests = {
         [94006] = "The Great Ursera Spirit",
         [94638] = "Strength and Mercy",
@@ -44,6 +44,7 @@ PK:RegisterGuide({
 
         -- Dalaran
         go(ALTERAC, 12.2, 56.6, "This is the one stretch on foot. Go with your warrior, do not fight, and keep running if chased; dying only sends you to the nearest graveyard. From Southshore go west, then north along the shore of Lordamere Lake to Dalaran, in the south-west corner of the Alterac Mountains. The skycutter dock is where you first arrived from the isle, on the north side of the city (fan guides say about 12.5, 51.8).", "Arcane elementals in groups roam the Dalaran ruins, and guides warn of hostile guards nearby. Keep to the edge and do not fight."),
+        go(ALTERAC, 12.5, 51.8, "Skycutter dock: the north side of Dalaran, where fan guides place it (one describes it as an outer balcony of the Violet Citadel, up on the second floor near a mailbox). If the ship is not here, try the previous spot, where you first landed from the isle."),
         note("Wait for the skycutter to Valanaar (every 5 to 10 minutes) and board it. Press next once you land on Zephras Isle. If it will not take you, tell Claude what you see."),
 
         -- Zephras Isle
