@@ -1,4 +1,4 @@
--- Andarna's guide: overland back to Zephras Isle for Bear Form, for a Skyborne druid who left the
+-- Andarna's guide: by boat and on foot back to Zephras Isle for Bear Form, for a Skyborne druid who left the
 -- isle without it.
 --
 -- What is known (2026-11-24):
@@ -6,11 +6,12 @@
 --     from mainland druid trainers only teaches Teleport: Moonglade and has no follow-up
 --     (found out in game; the Blizzard forums and fan guides say the same).
 --   * The Stormwind portal to Dalaran that some guides mention was not there in game.
---   * The skycutter between Valanaar and Dalaran is how you left; guides say it also runs back.
--- Where the waypoints come from: PathKeeper 0.33.29's own guides (Loch Modan, Wetlands, Arathi,
--- Hillsbrad, the Dalaran arrival point, and the isle quest steps). The Dalaran dock position is
--- PathKeeper's arrival point for the skycutter; fan guides put the dock at about 12.5, 51.8.
--- NOT yet confirmed in game: the walk itself at level 11, and boarding the skycutter in Dalaran.
+--   * Confirmed in game at level 11 (2026-11-24): the Auberdine boat carries on from Menethil to
+--     Southshore, the walk from Southshore to Dalaran is survivable, the skycutter does take you
+--     from Dalaran back to Valanaar, and the Valanaar chain gives Bear Form.
+-- Where the waypoints come from: PathKeeper 0.33.29's own guides (Hillsbrad, the Dalaran arrival
+-- point, and the isle quest steps). Still unknown: which of the two Dalaran spots below is the
+-- real boarding point (PathKeeper's arrival point, or the fan guides' 12.5, 51.8).
 local PK = PathKeeper
 if not (PK and PK.RegisterGuide) then return end
 
@@ -28,7 +29,7 @@ PK:RegisterGuide({
     minLevel = 10,
     maxLevel = 25,
     map = ISLE,
-    rev = "8",
+    rev = "9",
     quests = {
         [94006] = "The Great Ursera Spirit",
         [94638] = "Strength and Mercy",
