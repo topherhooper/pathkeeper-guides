@@ -29,7 +29,8 @@ PK:RegisterGuide({
     minLevel = 10,
     maxLevel = 25,
     map = ISLE,
-    rev = "9",
+    next = "alliance-dunmorogh", -- PathKeeper's dwarf route, which carries our druid overlay steps
+    rev = "10",
     quests = {
         [94006] = "The Great Ursera Spirit",
         [94638] = "Strength and Mercy",
@@ -60,6 +61,6 @@ PK:RegisterGuide({
         -- Leaving again
         { at = { 64.9, 80.9 }, class = "DRUID", manual = true, text = "Quais aériens de Valanaar : prends le skycutter de gauche, vers Dalaran." },
         go(ALTERAC, 12.0, 56.2, "Dalaran: take the Skyborne Portal to Stormwind, right next to where you land."),
-        note("You are back in Stormwind with Bear Form. Bind your hearthstone wherever you are leveling, then type /pk detect to return to your route."),
+        note("You are back in Stormwind with Bear Form. Bind your hearthstone in Ironforge or wherever you are leveling. Press next: the guide carries on with the dwarf leveling route (Dun Morogh, then Loch Modan), where the steps marked Andarna's guide continue."),
     },
 })
