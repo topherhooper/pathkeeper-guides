@@ -1,0 +1,9 @@
+## Interface: 16001
+## Title: PathKeeper: Andarna's Guide
+## Notes: Andarna Nightingale's healer druid guide for PathKeeper: druid steps on the dwarf and human route.
+## Version: 0.3.0
+## Dependencies: PathKeeper
+
+Guides\Skyborne_Druid_Zephras.lua
+Guides\Andarna_Bear_Form.lua
+Overlays\Druid_DwarfHuman.lua

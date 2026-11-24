@@ -1,0 +1,13 @@
+{
+  "name": "pathkeeper-guides",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Our own guide pack for the PathKeeper WoW Forever addon",
+  "type": "module",
+  "scripts": {
+    "check": "node tools/check.mjs"
+  },
+  "devDependencies": {
+    "fengari": "^0.1.4"
+  }
+}
