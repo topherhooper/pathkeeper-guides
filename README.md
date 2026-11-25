@@ -21,6 +21,7 @@ to play; the rest is for editing and checking guides.
 
 - `/pk guides` lists every guide; ours have ids that start with `ours-`.
 - `/pk load ours-andarna-bear-form` loads one (the overland route back to Zephras Isle for Bear Form, for a Skyborne druid who left without it). `/pk detect` goes back to PathKeeper's own route.
+- `/pk load ours-andarna-to-loch-modan` is the short way out of Dun Morogh: only the quests that carry on into Loch Modan, Ironforge or the Hall of Thanes dungeon (including the one PathKeeper tells you to skip, whose reward is the Ironforge Greathammer). It hands over to PathKeeper's Loch Modan guide when finished.
 - Our guides set `kind = "custom"`, so PathKeeper's auto-detect never switches to them by itself.
 
 ## The druid overlay (dwarf and human route)
