@@ -34,7 +34,8 @@ dungeons at that level. Notes clear with the next-step button.
 Each stop also carries one or two notes that start "Feral (level N)": how to quest as a Feral
 druid at that level (bear and cat rotation, gear, talents to take, what unlocks next). They are our own short
 summary of the [Icy Veins Feral Druid leveling guide for WoW Forever](https://www.icy-veins.com/wow-forever/feral-druid-leveling)
-by Meyra, read on 2026-11-24. The exact talent order and the gear lists are on that page (it has a
+by Meyra, read on 2026-11-24. The same author's [Feral overview](https://www.icy-veins.com/wow-forever/feral-druid-melee-dps-and-tank-pve-guide)
+links the rest (talents, rotation, stats, gear, class quests). The exact talent order and the gear lists are on that page (it has a
 level slider); the notes only carry the gist, so re-read the page if it is updated.
 
 To follow that route on a Skyborne druid:

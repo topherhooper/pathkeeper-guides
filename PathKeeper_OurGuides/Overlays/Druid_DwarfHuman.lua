@@ -9,6 +9,8 @@
 -- The "Feral" notes are our own short summary of the Icy Veins Feral Druid leveling guide for
 -- WoW Forever by Meyra (https://www.icy-veins.com/wow-forever/feral-druid-leveling, read 2026-11-24).
 -- That page has the full talent calculator and gear lists by level; the notes only carry the gist.
+-- The weapon-type line is from the same author's Feral overview
+-- (https://www.icy-veins.com/wow-forever/feral-druid-melee-dps-and-tank-pve-guide).
 local PK = PathKeeper
 if not (PK and PK.guides) then return end
 
@@ -87,7 +89,7 @@ overlay("alliance-lochmodan", "^Maître de classe %(niveau 12%)", {
     prof(PROF.IF_AID, "First Aid: Nissa Firestone in Ironforge, near the herbalism trainer. In Forever, healing potions are made with First Aid (the first one is Peacebloom, mild spices and a vial), and it does not use up a profession slot. Learn it and keep it trained."),
     note("Professions: /pk metiers add herbo and /pk metiers add alchi make PathKeeper track both. /pk metiers then shows where to pick herbs and what to brew at your skill. Turn on Find Herbs and pick everything on your route; brew when you are in town."),
     note("Healing (level 12): Regrowth is your second heal, a quick heal plus a heal over time. Open each pull with Rejuvenation on the warrior, use Regrowth when a hit lands hard, and keep Healing Touch for when you have time to cast it. While questing as a duo, Moonfire and Wrath between heals."),
-    feral(12, "your form damage comes from weapon DPS, so take the highest-DPS weapon whatever its speed. The guide's first standout for Alliance is the Ironforge Greathammer from clearing Hall of Thanes. On other gear look for Agility, Strength and Stamina. Demoralizing Roar cuts the damage you take when several enemies are on you, and Thorns does more the more of them hit you."),
+    feral(12, "your form damage comes from weapon DPS, so take the highest-DPS weapon whatever its speed. Two-handed ones have the most: maces, polearms and staves (many staves are made for casters). The guide's first standout for Alliance is the Ironforge Greathammer from clearing Hall of Thanes. On other gear look for Agility, Strength and Stamina. Demoralizing Roar cuts the damage you take when several enemies are on you, and Thorns does more the more of them hit you."),
     feral(12, "at 16 the Aquatic Form quest opens: do it as soon as you can for underwater quests. Carry food and water, because bear fights still cost health and the mana you heal with. Food made with Cooking also adds 5% experience from kills, and the Cozy Sleeping Bag quest chain adds another 3%."),
     note("First dungeon: Hall of Thanes in Ironforge opens at 13 (recommended 13-20). /pk dj lists dungeons at your level and loads their quest guide; /pk lfg writes the group message with you as healer and your warrior as tank."),
 })
