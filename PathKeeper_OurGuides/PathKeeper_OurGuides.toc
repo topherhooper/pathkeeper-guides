@@ -1,6 +1,6 @@
 ## Interface: 16001
 ## Title: PathKeeper: Andarna's Guide
-## Notes: Andarna Nightingale's druid guide for PathKeeper: trainer, healer and Balance leveling steps on the dwarf and human route.
+## Notes: Andarna Nightingale's druid guide for PathKeeper: trainer, healer and Feral leveling steps on the dwarf and human route.
 ## Version: 0.4.0
 ## Dependencies: PathKeeper
 

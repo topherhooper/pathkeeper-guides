@@ -31,10 +31,10 @@ PathKeeper's own guides when the game loads: Dun Morogh (6-12), Loch Modan (12-1
 classes train (levels 10, 12, 18, 20 and 30), each followed by notes on the bear and healer kit for
 dungeons at that level. Notes clear with the next-step button.
 
-Each stop also carries one or two notes that start "Balance (level N)": how to quest as a Balance
-druid at that level (opener, heals, talents to take, what unlocks next). They are our own short
-summary of the [Icy Veins Balance Druid leveling guide for WoW Forever](https://www.icy-veins.com/wow-forever/balance-druid-leveling)
-by Voulk, read on 2026-11-24. The exact talent order and the gear lists are on that page (it has a
+Each stop also carries one or two notes that start "Feral (level N)": how to quest as a Feral
+druid at that level (bear and cat rotation, gear, talents to take, what unlocks next). They are our own short
+summary of the [Icy Veins Feral Druid leveling guide for WoW Forever](https://www.icy-veins.com/wow-forever/feral-druid-leveling)
+by Meyra, read on 2026-11-24. The exact talent order and the gear lists are on that page (it has a
 level slider); the notes only carry the gist, so re-read the page if it is updated.
 
 To follow that route on a Skyborne druid:
