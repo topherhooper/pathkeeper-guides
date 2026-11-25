@@ -5,10 +5,14 @@
 -- into those guides when the game loads: a trainer stop at each point where the other classes
 -- train, followed by a short note on what to set up for tanking and healing dungeons.
 -- Nothing in PathKeeper's folder is edited, so its updates do not undo this.
+--
+-- The "Balance" notes are our own short summary of the Icy Veins Balance Druid leveling guide for
+-- WoW Forever by Voulk (https://www.icy-veins.com/wow-forever/balance-druid-leveling, read 2026-11-24).
+-- That page has the full talent calculator and gear lists by level; the notes only carry the gist.
 local PK = PathKeeper
 if not (PK and PK.guides) then return end
 
-local REV = "ours8" -- change when the steps below change, so PathKeeper re-finds your place
+local REV = "ours9" -- change when the steps below change, so PathKeeper re-finds your place
 PK.oursOverlayReport = {}
 
 -- Trainers whose position comes from PathKeeper's own data.
@@ -35,6 +39,8 @@ local PROF = {
     SW_HERB ={ npc = "Tannysa", at = { 54.3, 84.1 }, map = 1453 },
     SW_ALCH = { npc = "Lilyssia Nightbreeze", at = { 55.7, 86.1 }, map = 1453 },
 }
+-- Damage notes for questing as Balance (see the source named at the top of this file).
+local function balance(level, text) return note("Balance (level " .. level .. "): " .. text) end
 local function prof(where, text)
     return { npc = where.npc, at = where.at, map = where.map, class = "DRUID", ours = true, text = "Andarna's guide. " .. text }
 end
@@ -65,6 +71,8 @@ overlay("alliance-dunmorogh", "^Maître de classe %(niveau 10%)", {
         "Druid trainer (level 10): Sheldras Moontree in the Stormwind Park. Take the Deeprun Tram from Ironforge. Learn Teleport: Moonglade here; later stops use it."),
     note("Healer setup (level 10): tell PathKeeper your role with /pk role soigneur (healer), add your warrior as tank in the Group tab (/pk groupe), and turn dungeon quests on with /pk donjon on. Keep Healing Touch, Rejuvenation, Mark of the Wild and Thorns on your caster bar; Mark and Thorns go on the warrior before every pull."),
     note("Healer gear (level 10): from now on pick Intellect and Spirit on quest rewards, in cloth or leather. Buy water every time you pass an innkeeper: drinking is what sets your pace with a warrior."),
+    balance(10, "the first levels are slow, so be patient. Put Rejuvenation on yourself, open with Wrath (or Moonfire if someone else might tag the mob first), then keep casting Wrath. Around this level, Moonfire followed by hitting it with your staff can kill as fast as Wrath does. Pull one enemy at a time and use Entangling Roots when two stand close together."),
+    balance(10, "talents, from the Icy Veins Balance leveling guide: Improved Wrath first, then Nature's Reach early for the extra range (it helps you tag mobs in busy areas). The guide's page has a level slider with the exact point order."),
     note("Bear Form quest (level 10): a Skyborne only gets it on Zephras Isle (the Moonglade quest from mainland trainers just teaches the teleport). Type /pk load ours-andarna-bear-form for the overland route back, then /pk detect to return here. Bear Form is your backup, not your job: it keeps you alive when something turns on you."),
 })
 
@@ -79,6 +87,7 @@ overlay("alliance-lochmodan", "^Maître de classe %(niveau 12%)", {
     prof(PROF.IF_AID, "First Aid: Nissa Firestone in Ironforge, near the herbalism trainer. In Forever, healing potions are made with First Aid (the first one is Peacebloom, mild spices and a vial), and it does not use up a profession slot. Learn it and keep it trained."),
     note("Professions: /pk metiers add herbo and /pk metiers add alchi make PathKeeper track both. /pk metiers then shows where to pick herbs and what to brew at your skill. Turn on Find Herbs and pick everything on your route; brew when you are in town."),
     note("Healing (level 12): Regrowth is your second heal, a quick heal plus a heal over time. Open each pull with Rejuvenation on the warrior, use Regrowth when a hit lands hard, and keep Healing Touch for when you have time to cast it. While questing as a duo, Moonfire and Wrath between heals."),
+    balance(12, "Regrowth is also your mid-fight heal when questing alone; Rejuvenation before the pull and one Regrowth is usually enough. Nature's Grasp buys room when you pull an extra enemy. Keep Mark of the Wild and Thorns on yourself, and carry several stacks of water. At 14 a quest gives the Cozy Sleeping Bag, whose stacking experience bonus is worth the detour."),
     note("First dungeon: Hall of Thanes in Ironforge opens at 13 (recommended 13-20). /pk dj lists dungeons at your level and loads their quest guide; /pk lfg writes the group message with you as healer and your warrior as tank."),
 })
 
@@ -90,6 +99,7 @@ overlay("alliance-lochmodan", "^Maître de classe %(niveau 18%)", {
         "Druid trainer (level 18): Teleport: Moonglade, train with Loganaar, hearth back. (Or wait for the Stormwind Park: you fly there next.)"),
     note("Professions before Deadmines: brew a stack of the best mana potions (Alchemy) and healing potions (First Aid) that /pk metiers lists for your skill, and keep them for dungeons. If Ironforge is on your way, both trainers are there (Reyna Stonebranch and Vosur Brakthel); otherwise Stormwind is your next stop."),
     note("Healing (levels 14-18): Cure Poison (14) matters in Deadmines. Keep Rejuvenation rolling on the warrior, Regrowth for big hits, Healing Touch when things are calm, and drink while the warrior marks the next pull. Faerie Fire (18) on the warrior's target helps the whole group."),
+    balance(18, "stop at campfires when you pass one (once an hour they give buffs other players left there) and log out at an inn for rested experience. Run each dungeon once for its quests rather than repeating it for drops. On gear, Spell Power comes first, then Intellect."),
     note("Dungeons now: Deadmines is recommended 17-26 and Ruins of Lordaeron 15-22. If a pull goes wrong, Hibernate (18, beasts only) on a loose mob buys more time than a heal, and Bash (14) in Bear Form is your emergency stun."),
 })
 
@@ -103,6 +113,8 @@ overlay("alliance-redridge", "^Maître de classe.-niveau 20", {
     prof(PROF.SW_ALCH, "Alchemy: Lilyssia Nightbreeze in Stormwind, a few steps from Tannysa. Train the next rank and any new recipes."),
     prof(PROF.SW_AID, "First Aid: Shaina Fuller in Stormwind. Train the next rank so you can make the next healing potion; /pk metiers add secourisme tracks it."),
     note("Healing (level 20): Rebirth is a resurrection you can cast in combat (it needs a reagent, so carry some). Cat Form is for moving and for damage while the warrior is safe."),
+    balance(20, "Omen of Clarity and Cat Form arrive now; Prowl in Cat Form lets you sneak past packs you do not want to fight. At 25 Insect Swarm becomes available from the Balance tree: cast it after Moonfire on anything that will live long enough, with Wrath as the filler. In a multi-enemy fight, put both on every enemy and do not refresh them early."),
+    balance(20, "talents: the guide leaves Vengeance until later because you have little crit while leveling, and treats the early Reflection points as optional (they cut down drinking). Starfire stays out of the rotation until Eclipse is 3/3, which comes late."),
     note("Talents for a healer: PathKeeper's only healing template is its level 60 Restoration build (/pk talents). Use it to see which Restoration talents exist in Forever and take the cheaper-heal and stronger-heal ones first; its order is written for 60, not for leveling."),
 })
 
@@ -114,6 +126,7 @@ overlay("alliance-duskwood-2", "^Maître de classe.-niveau 30", {
         "Druid trainer (level 30): Sheldras Moontree in the Stormwind Park. Between trips, Teleport: Moonglade every two levels keeps your heals at the top rank."),
     prof(PROF.SW_HERB, "Herbalism: Tannysa in Stormwind, in the Mage Quarter. Train the next rank if your skill is near its cap."),
     prof(PROF.SW_ALCH, "Alchemy: Lilyssia Nightbreeze, beside Tannysa. Train the next rank and new recipes, and restock vials."),
+    balance(30, "Travel Form (outdoors only) makes questing much faster. Coming at 40: Moonkin Form at the bottom of the Balance tree, Innervate, and Hurricane, your first real area spell. Use Hurricane on three or more enemies, with Barkskin up, and ideally on an Omen of Clarity proc because it is expensive. Once Eclipse is 3/3 the filler becomes one Wrath then two Starfire; drop the Starfires when mana is low."),
     note("Healing (levels 24-30): Remove Curse (24) and Abolish Poison (26) are yours to cast, so watch debuffs as well as health. Tranquility (30) is your group heal for when everything goes wrong at once. Stockade is recommended 24-32, Excavation Site: Wetlands 26-33, Gnomeregan 29-38."),
 })
 

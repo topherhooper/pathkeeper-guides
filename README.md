@@ -28,8 +28,14 @@ to play; the rest is for editing and checking guides.
 `Overlays\Druid_DwarfHuman.lua` does not register a guide. It adds druid-only steps into three of
 PathKeeper's own guides when the game loads: Dun Morogh (6-12), Loch Modan (12-18) and Redridge
 (17-25). PathKeeper has no druid trainer stops there, so the overlay adds one wherever the other
-classes train (levels 10, 12, 18 and 20), each followed by notes on the bear and healer kit for
+classes train (levels 10, 12, 18, 20 and 30), each followed by notes on the bear and healer kit for
 dungeons at that level. Notes clear with the next-step button.
+
+Each stop also carries one or two notes that start "Balance (level N)": how to quest as a Balance
+druid at that level (opener, heals, talents to take, what unlocks next). They are our own short
+summary of the [Icy Veins Balance Druid leveling guide for WoW Forever](https://www.icy-veins.com/wow-forever/balance-druid-leveling)
+by Voulk, read on 2026-11-24. The exact talent order and the gear lists are on that page (it has a
+level slider); the notes only carry the gist, so re-read the page if it is updated.
 
 To follow that route on a Skyborne druid:
 
